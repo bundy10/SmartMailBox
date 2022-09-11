@@ -1,0 +1,83 @@
+.container {
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  z-index: 10;
+}
+
+.container > p {
+  color: #3D3B3B;
+  font-size: 28px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  z-index: 20;
+  position: relative;
+  text-align: center;
+}
+
+.glitch {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
+    0.025em 0.04em 0 #2A2323;
+  animation: glitch 725ms infinite;
+  margin-top: -400px;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
+      0.025em 0.04em 0 #2A2323;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
+      0.025em 0.04em 0 #2A2323;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #F1E8E8, 0.025em 0.035em 0 #D24949,
+      -0.05em -0.05em 0 #2A2323;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #F1E8E8, 0.025em 0.035em 0 #D24949,
+      -0.05em -0.05em 0 #2A2323;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #F1E8E8, 0.03em 0 0 #D24949,
+      0 -0.04em 0 #2A2323;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #F1E8E8, 0.03em 0 0 #D24949,
+      0 -0.04em 0 #2A2323;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #F1E8E8, -0.025em -0.04em 0 #D24949,
+      -0.04em -0.025em 0 #2A2323;
+  }
+}
