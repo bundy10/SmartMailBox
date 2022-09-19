@@ -8,35 +8,6 @@ import Login from './Components/pages/Login';
 
 class App extends Component {
   
-  constructor(){
-
-    super();
-
-    this.state = {
-      buttons: []
-    }
-
-  }
-
-  componentWillMount(){
-
-    this.setState({
-      buttons: [
-        {
-          id: 1,
-          name: 'lock',
-          action: 'on'
-        },
-        {
-          id: 2,
-          name: 'unlock',
-          action: 'off'
-        }
-      ] 
-    })
-
-  }
-
   render() {
 
     return (
