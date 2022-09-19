@@ -1,5 +1,5 @@
+// main app 
 import React, { Component } from 'react';
-import Navbar from './Components/Navbar';
 import Home from './Components/pages/Home';
 import Picture from './Components/pages/Picture';
 import './App.css';
@@ -42,9 +42,9 @@ class App extends Component {
     return (
       <Router>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/' element={<Login/>}></Route>
         <Route path='/Picture' element={<Picture/>}></Route>
-        <Route path='/Login' element={<Login/>}></Route>
+        <Route path='/Home' element={<Home/>}></Route>
       </Routes>
     </Router>
     );

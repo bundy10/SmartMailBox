@@ -1,6 +1,6 @@
 import React from 'react';
 import { emailValidator, passwordValidator } from './RegexValidator';
-import {useNavigate} from "react-router-dom"
+import {Route, useNavigate} from "react-router-dom"
 import './Login.css'
 
 const Login = () => {
@@ -16,8 +16,8 @@ const Login = () => {
 	};
 
 	React.useEffect(()=>{
-		if(localStorage.getItem('auth')) navigate('/')
-	},[])
+		if(localStorage.getItem('auth')) navigate('/Home');
+	},)
 
 	const formSubmitter = e => {
 		e.preventDefault();
