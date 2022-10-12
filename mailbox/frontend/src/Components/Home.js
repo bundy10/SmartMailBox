@@ -21,12 +21,12 @@ class Home extends Component {
       buttons: [
         {
           id: 1,
-          name: 'lock',
+          name: 'Lock',
           action: 'on'
         },
         {
           id: 2,
-          name: 'unlock',
+          name: 'Unlock',
           action: 'off'
         }
       ] 
@@ -40,11 +40,11 @@ class Home extends Component {
       <div className='container'>
         <Panel buttons={this.state.buttons} />
       <h1 className='glitch'> 
-<span aria-hidden="true">Home, <br/>  <br/>  <i className="fa-solid fa-robot fa-bounce"></i> </span>
-Home,  <i className="fa-solid fa-robot fa-bounce"></i></h1>
-<span aria-hidden="true">Home, <br/>  <br/> </span>
+<span aria-hidden="true">Home <br/>  <br/>  <i className="fa-solid fa-robot fa-bounce"></i> </span>
+Home  <i className="fa-solid fa-robot fa-bounce"></i></h1>
+<span aria-hidden="true">Home <br/>  <br/> </span>
 <p>
-  awdwwwwwwwwwwwwwww
+  Click to Lock & Unlock your Smartmailbox
  </p>
 </div>
     );

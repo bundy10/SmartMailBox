@@ -34,13 +34,15 @@ class Picture extends Component {
 
     return (
       <div className='container'>
-        <Panel buttons={this.state.buttons} />
+        
       <h1 className='glitch'> 
-<span aria-hidden="true">Picture, <br/>  <br/>  <i className="fa-solid fa-robot fa-bounce"></i> </span>
-Picture,  <i className="fa-solid fa-robot fa-bounce"></i></h1>
-<span aria-hidden="true">Picture, <br/>  <br/> </span>
+<span aria-hidden="true">Picture <br/>  <br/>  <i className="fa-solid fa-robot fa-bounce"></i> </span>
+Picture  <i className="fa-solid fa-robot fa-bounce"></i></h1>
+<span aria-hidden="true">Picture <br/>  <br/> </span>
 <p>
-  awdwwwwwwasd
+  <div className='container2' >
+  <Panel buttons={this.state.buttons} />
+  </div>
  </p>
 </div>
     );

@@ -1,5 +1,5 @@
 .container {
-  height: 150vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,10 @@
   z-index: 10;
 }
 
+.container2 {
+  height: 100%;
+  
+}
 .container > p {
   color: #3D3B3B;
   font-size: 28px;
