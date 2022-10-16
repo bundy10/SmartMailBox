@@ -14,12 +14,14 @@ doorswitch = 24
 Yled = 3
 button = 25
 
+
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(solenoid, GPIO.OUT)
 GPIO.setup(Bled, GPIO.OUT)
-GPIO.setup(doorswitch, GPIO.OUT)
+GPIO.setup(doorswitch, GPIO.IN)
 GPIO.setup(flashes, GPIO.OUT)
 GPIO.setup(Yled, GPIO.OUT)
-GPIO.setup(button, GPIO.OUT)
+GPIO.setup(button, GPIO.IN)
 
 
 def control():
@@ -32,7 +34,7 @@ def control():
         GPIO.output(Bled, GPIO.HIGH)
         GPIO.output(solenoid, GPIO.LOW)
 
-    if GPIO.output(doorswitch, GPIO.HIGH):
+    if GPIO.input(doorswitch, GPIO.HIGH):
         time.sleep(5)
         GPIO.output(solenoid, GPIO.HIGH)
         GPIO.output(Bled, GPIO.LOW)
@@ -42,7 +44,7 @@ def control():
 
 def main():
     while running:
-        if GPIO.output(button, GPIO.HIGH):
+        if GPIO.input(button, GPIO.HIGH):
             control()
 
 
