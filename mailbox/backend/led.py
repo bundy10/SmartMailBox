@@ -39,6 +39,7 @@ class LED:
 class Switch:
 
 	def triggered():
+		return 0
 
 
 
@@ -52,7 +53,7 @@ class Camera:
 		GPIO.setup(10, GPIO.OUT)
 		camera.start_preview() #turn camera on
 		GPIO.output(10, GPIO.HIGH)
-		sleep(5) #give it time to adjust to light level
+		time.sleep(5) #give it time to adjust to light level
 		camera.capture('/home/pi/Desktop/image.jpg')
 		camera.stop_preview()
 		GPIO.output(10, GPIO.LOW)
