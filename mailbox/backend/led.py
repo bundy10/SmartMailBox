@@ -4,7 +4,14 @@ import threading, time
 
 import logging
 
+from picamera import PiCamera
+
+from time import sleep
+
+
 logging.basicConfig(level=logging.DEBUG)
+
+GPIO.setmode(GPIO.BCM)
 
 class LED:
 	
@@ -13,8 +20,6 @@ class LED:
 	def __init__(self, channel):
 		
 		self.channel = channel
-
-		GPIO.setmode(GPIO.BCM)
 
 		GPIO.setup(self.channel, GPIO.OUT)
 
@@ -31,3 +36,26 @@ class LED:
 		return "off"
 
 
+class Switch:
+
+	def triggered():
+		return 0
+
+
+
+
+
+
+class Camera:
+
+	def TakePhoto():
+
+		GPIO.setup(10, GPIO.OUT)
+		camera.start_preview() #turn camera on
+		GPIO.output(10, GPIO.HIGH)
+		time.sleep(5) #give it time to adjust to light level
+		camera.capture('/home/pi/Desktop/image.jpg')
+		camera.stop_preview()
+		GPIO.output(10, GPIO.LOW)
+
+		
