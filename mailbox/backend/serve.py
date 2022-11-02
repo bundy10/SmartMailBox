@@ -13,7 +13,7 @@ def main():
 	
 	action = request.values['action']
 
-	led = LED(17)
+	led = LED(5)
 
 	if action == 'on':
 		led.on()
@@ -26,10 +26,11 @@ def main():
 @app.route('/switch', methods=['GET'])
 def button():
 
-	button = Switch(25)
+	button = Switch(8)
+	switchStatus = str(button.isTriggered())
 
 	response = app.response_class(
-        response={"switchStatus" : str(button.isTriggered())},
+        response={switchStatus},
         status=200,
         mimetype='application/json'
 	)

@@ -42,7 +42,7 @@ class Switch:
 		
 		self.channel = channel
 
-		GPIO.setup(self.channel, GPIO.IN)
+		GPIO.setup(self.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 	def isTriggered(self):
 		
