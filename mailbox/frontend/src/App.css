@@ -11,17 +11,81 @@
 }
 
 .container2 {
-  height: 100%;
-  
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  z-index: 10;
+  border: #2a2323 3px solid;
 }
-.container > p {
-  color: #3D3B3B;
+
+.container2 > p {
+  color: #3d3b3b;
   font-size: 28px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   z-index: 20;
   position: relative;
   text-align: center;
+}
+
+.bor {
+  border: 2px solid black;
+  margin: auto;
+  padding: 3px;
+}
+
+.container > p {
+  color: #3d3b3b;
+  font-size: 28px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  z-index: 20;
+  position: relative;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #f1e8e8, -0.03em -0.04em 0 #d24949,
+    0.025em 0.04em 0 #2a2323;
+  animation: glitch 725ms infinite;
+  margin: auto;
+}
+.imag {
+  position: relative;
+  padding: 3px;
+  float: left;
+  width: fit-content;
+  height: fit-content;
+  border: #2a2323 3px solid;
+}
+.btn {
+  color: white;
+  font-weight: bold;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 2pc;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  float: left;
+  background-color: blue;
+}
+
+.img {
+  border: #2a2323 3px solid;
+}
+
+.container2 {
+  border: 2px solid black;
 }
 
 .glitch {
@@ -29,8 +93,8 @@
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
-  text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
-    0.025em 0.04em 0 #2A2323;
+  text-shadow: 0.05em 0 0 #f1e8e8, -0.03em -0.04em 0 #d24949,
+    0.025em 0.04em 0 #2a2323;
   animation: glitch 725ms infinite;
   margin-top: -400px;
 }
@@ -57,31 +121,31 @@
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
-      0.025em 0.04em 0 #2A2323;
+    text-shadow: 0.05em 0 0 #f1e8e8, -0.03em -0.04em 0 #d24949,
+      0.025em 0.04em 0 #2a2323;
   }
   15% {
-    text-shadow: 0.05em 0 0 #F1E8E8, -0.03em -0.04em 0 #D24949,
-      0.025em 0.04em 0 #2A2323;
+    text-shadow: 0.05em 0 0 #f1e8e8, -0.03em -0.04em 0 #d24949,
+      0.025em 0.04em 0 #2a2323;
   }
   16% {
-    text-shadow: -0.05em -0.025em 0 #F1E8E8, 0.025em 0.035em 0 #D24949,
-      -0.05em -0.05em 0 #2A2323;
+    text-shadow: -0.05em -0.025em 0 #f1e8e8, 0.025em 0.035em 0 #d24949,
+      -0.05em -0.05em 0 #2a2323;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 #F1E8E8, 0.025em 0.035em 0 #D24949,
-      -0.05em -0.05em 0 #2A2323;
+    text-shadow: -0.05em -0.025em 0 #f1e8e8, 0.025em 0.035em 0 #d24949,
+      -0.05em -0.05em 0 #2a2323;
   }
   50% {
-    text-shadow: 0.05em 0.035em 0 #F1E8E8, 0.03em 0 0 #D24949,
-      0 -0.04em 0 #2A2323;
+    text-shadow: 0.05em 0.035em 0 #f1e8e8, 0.03em 0 0 #d24949,
+      0 -0.04em 0 #2a2323;
   }
   99% {
-    text-shadow: 0.05em 0.035em 0 #F1E8E8, 0.03em 0 0 #D24949,
-      0 -0.04em 0 #2A2323;
+    text-shadow: 0.05em 0.035em 0 #f1e8e8, 0.03em 0 0 #d24949,
+      0 -0.04em 0 #2a2323;
   }
   100% {
-    text-shadow: -0.05em 0 0 #F1E8E8, -0.025em -0.04em 0 #D24949,
-      -0.04em -0.025em 0 #2A2323;
+    text-shadow: -0.05em 0 0 #f1e8e8, -0.025em -0.04em 0 #d24949,
+      -0.04em -0.025em 0 #2a2323;
   }
 }
