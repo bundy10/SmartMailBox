@@ -38,8 +38,15 @@ class LED:
 
 class Switch:
 
-	def triggered():
-		return 0
+	def __init__(self, channel):
+		
+		self.channel = channel
+
+		GPIO.setup(self.channel, GPIO.IN)
+
+	def isTriggered(self):
+		
+		return GPIO.input(self.channel)
 
 
 
