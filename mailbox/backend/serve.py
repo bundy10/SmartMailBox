@@ -3,17 +3,20 @@ import json
 from tkinter import SW
 from flask import Flask
 from flask import request
+from flask import jsonify
+from flask_cors import CORS
 
 from led import LED, Switch
 
 app = Flask(__name__)
+cors = CORS(app)
 
 @app.route('/', methods=['POST'])
 def main():
 	
 	action = request.values['action']
 
-	led = LED(5)
+	led = LED(2)
 
 	if action == 'on':
 		led.on()
@@ -29,9 +32,5 @@ def button():
 	button = Switch(8)
 	switchStatus = str(button.isTriggered())
 
-	response = app.response_class(
-        response={switchStatus},
-        status=200,
-        mimetype='application/json'
-	)
-	return response
+
+	return switchStatus
